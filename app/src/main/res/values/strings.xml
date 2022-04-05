@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Meus Livros</string>
+    <string name="main_activity_title">Meus Livros</string>
+    <string name="hello_world">Hello World!</string>
+</resources>
