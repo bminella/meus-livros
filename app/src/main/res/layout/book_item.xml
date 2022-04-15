@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="16dp"
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="8dp"
         android:orientation="vertical">
 
         <TextView
@@ -15,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textSize="24sp"
             tools:text="Title" />
 
         <LinearLayout
@@ -34,16 +37,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/book_item_authors"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Authors" />
 
                 <TextView
+                    android:id="@+id/book_item_subjects"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Subjects" />
 
                 <Button
+                    android:id="@+id/book_item_preview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Preview" />
