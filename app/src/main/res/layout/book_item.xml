@@ -46,7 +46,9 @@
                     android:id="@+id/book_item_subjects"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="Subjects" />
+                    tools:text="Subjects"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
 
                 <Button
                     android:id="@+id/book_item_preview"

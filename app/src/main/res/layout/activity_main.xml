@@ -28,7 +28,7 @@
         android:layout_below="@id/app_bar"
         android:background="@android:color/white"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/book_item"
-        tools:itemCount="3"/>
+        tools:itemCount="3"
+        tools:listitem="@layout/book_item" />
 
 </RelativeLayout>

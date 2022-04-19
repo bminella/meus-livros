@@ -48,6 +48,8 @@ class BookAdapter(private val bookList: Array<Book>) :
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         viewHolder.tvTitle.text = bookList[position].title
+        viewHolder.tvAuthors.text = bookList[position].authors.toString()
+        viewHolder.tvSubjects.text = bookList[position].subjects.toString()
     }
 
     // Return the size of your dataset (invoked by the layout manager)
