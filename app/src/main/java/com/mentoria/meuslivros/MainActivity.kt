@@ -2,7 +2,6 @@ package com.mentoria.meuslivros
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 
@@ -61,8 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView_books)
 
-        recyclerView.adapter = BookAdapter(arrayOf(book))
-
+        recyclerView.adapter = BookAdapter(arrayOf(book),this)
 //        Log.d("App", tt.toString())
     }
 }

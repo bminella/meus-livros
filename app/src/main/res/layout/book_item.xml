@@ -54,7 +54,7 @@
                     android:id="@+id/book_item_preview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="Preview" />
+                    android:text="Preview" />
             </LinearLayout>
         </LinearLayout>
 

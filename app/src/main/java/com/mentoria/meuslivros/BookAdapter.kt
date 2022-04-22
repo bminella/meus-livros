@@ -1,5 +1,7 @@
 package com.mentoria.meuslivros
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,11 +9,10 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.core.net.toUri
 
-class BookAdapter(private val bookList: Array<Book>) :
+class BookAdapter(private val bookList: Array<Book>, private val context: Context) :
     RecyclerView.Adapter<BookAdapter.ViewHolder>() {
-
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
@@ -50,6 +51,12 @@ class BookAdapter(private val bookList: Array<Book>) :
         viewHolder.tvTitle.text = bookList[position].title
         viewHolder.tvAuthors.text = bookList[position].authors.toString()
         viewHolder.tvSubjects.text = bookList[position].subjects.toString()
+        viewHolder.btPreview.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, bookList[position].formats.previewLink.toUri()
+            )
+            context.startActivity(intent)
+        }
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
